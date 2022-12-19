@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>LogIn & SignUp Form</title>
+	<style>
+		*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.container
+{
+    height: 100%;
+    width:100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(background.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+.form-box
+{
+    width: 380px;
+    height: 450px;
+    background: white;
+    margin: 6% auto;
+    position: relative;
+    padding: 5px; 
+    overflow: hidden;
+}
+.button-box
+{
+    width:220px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 3px #9AFBFA;
+    border-radius: 35px;
+}
+.toggle-btn
+{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+#btn
+{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(to right, #9AFBFA,#D071F9);
+    border-radius: 30px;
+    transition: 1s;
+}
+.social-media
+{
+    margin: 30px;
+    text-align: center;
+}
+.social-media img
+{
+    width: 30px;
+    margin: 0 10px;
+    box-shadow: 0 0 20px 0 #f7f7f7;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.login-form
+{
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: 1s;
+}
+.form-feild
+{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid #999;
+    outline: none;
+    background: transparent;
+}
+.submit
+{
+    width: 85%;
+    padding: 10px 25px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #9AFBFA,#D071F9);
+    border: 0;
+    outline: none;
+    border-radius: 25px;
+
+}
+.checkbox
+{
+    margin: 30px 5px;
+
+}
+span
+{
+    color: #777;
+    font-size: 12px;
+    bottom: 64px;
+    position: absolute;
+}
+
+#login
+{
+    left: 50px;
+}
+#register
+{
+    left: 450px;
+}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="form-box">
+			<div class="button-box">
+
+				<div id="btn"></div>
+
+				<button type="button" class="toggle-btn" onclick="login()">Login</button>
+				<button type="button" class="toggle-btn" onclick="register()">Register</button>
+
+			</div>
+		
+		<div class="social-media">
+			<img src="faceook.jpg">
+			<img src="download.jpg">
+			<img src="174857.png">
+		</div>
+		
+
+		<form class="login-form" id="login">
+			<input type="text" class="form-feild" placeholder="Username" required>
+			<input type="password" class="form-feild" placeholder="Password" required>
+			<input type="checkbox" class="checkbox"><span>Remember Password</span>
+
+			<button type="submit" class="submit">Login</button>
+		</form>
+		
+		
+		<form class="login-form" id="register">
+			<input type="text" class="form-feild" placeholder="Username" required>
+			<input type="email" class="form-feild" placeholder="Email Address" required>
+
+			<input type="password" class="form-feild" placeholder="Password" required>
+			<input type="checkbox" class="checkbox"><span>I Accept to the term and Conditions</span>
+
+			<button type="submit" class="submit">Register</button>
+		</form>
+		</div>
+	</div>
+<script>
+	var x = document.getElementById("login");
+	var y = document.getElementById("Register");	
+	var z = document.getElementById("btn");
+
+	function register()
+	{
+		x.style.left = "-400px";
+		y.style.left = "50px";
+		z.style.left = "110px";
+	}
+	function login()
+	{
+		x.style.left = "50px";
+		y.style.left = "450px";
+		z.style.left = "0";
+	}
+
+</script>
+</body>
+</html>
